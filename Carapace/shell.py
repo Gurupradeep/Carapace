@@ -20,6 +20,7 @@ def init() :
 	register_command("cd",cd)
 	register_command("exit", exit)
 	register_command("history",history)
+	register_command("prev",prev)
 
 def shell_loop() :
 	status = SHELL_STATUS_RUN
@@ -31,6 +32,8 @@ def shell_loop() :
 
 		#Read the command input
 		cmd = sys.stdin.readline()
+
+
 
 		#Tokenise the command input
 		cmd_tokens = tokenize(cmd)
