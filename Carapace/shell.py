@@ -19,7 +19,7 @@ def register_command(name,func) :
 def init() :
 	register_command("cd",cd)
 	register_command("exit", exit)
-
+	register_command("history",history)
 
 def shell_loop() :
 	status = SHELL_STATUS_RUN
@@ -47,6 +47,9 @@ def tokenize(string) :
 
 
 def execute(cmd_tokens):
+	#To write the history into a file
+	with open(HISTORY_PATH, 'a') as history_file :
+		history_file.write(' '.join(cmd_tokens) + os.linesep)
 	#Extract the command name and arguments from the tokens
 	cmd_name = cmd_tokens[0]
 	cmd_args = cmd_tokens[1:]
