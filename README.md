@@ -3,12 +3,8 @@
 ### A simple shell written in python
 
 
-### Quick start 
-Setting up the shell is very simple. Just download the project and the type the following commands
-
-1. `$ cd Carapace
-
-Starting the shell:
+### Starting the shell
+The shell can be run as a module with the help of following command.
 
     python -m Carapace.shell
 
